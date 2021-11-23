@@ -23,6 +23,7 @@
             <xs:element name="population" type="xs:int"/>
             <xs:element name="capital" type="xs:string"/>
             <xs:element name="currency" type="tns:currency"/>
+            <xs:element name="president" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -31,6 +32,33 @@
             <xs:enumeration value="GBP"/>
             <xs:enumeration value="EUR"/>
             <xs:enumeration value="PLN"/>
+            <xs:enumeration value="RUB"/>
         </xs:restriction>
     </xs:simpleType>
+
+    <xs:element name="getMusicRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getMusicResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="musicGroup" type="tns:musicGroup"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="musicGroup">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="participants" type="xs:string"/>
+            <xs:element name="album" type="xs:int"/>
+            <xs:element name="baseDate" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
 </xs:schema>

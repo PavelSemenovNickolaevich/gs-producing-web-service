@@ -18,6 +18,8 @@ public class CountryRepository {
 		Country spain = new Country();
 		spain.setName("Spain");
 		spain.setCapital("Madrid");
+		spain.setPopulation(46704314);
+		spain.setPresident("Test1");
 		spain.setCurrency(Currency.EUR);
 		spain.setPopulation(46704314);
 
@@ -28,6 +30,7 @@ public class CountryRepository {
 		poland.setCapital("Warsaw");
 		poland.setCurrency(Currency.PLN);
 		poland.setPopulation(38186860);
+		poland.setPresident("Test2");
 
 		countries.put(poland.getName(), poland);
 
@@ -36,8 +39,18 @@ public class CountryRepository {
 		uk.setCapital("London");
 		uk.setCurrency(Currency.GBP);
 		uk.setPopulation(63705000);
+		uk.setPresident("Test3");
 
 		countries.put(uk.getName(), uk);
+
+		Country russia = new Country();
+		russia.setName("Russia");
+		russia.setCapital("Moscow");
+		russia.setCurrency(Currency.RUB);
+		russia.setPopulation(1500000);
+		russia.setPresident("Putin");
+
+		countries.put(russia.getName(), russia);
 	}
 
 	public Country findCountry(String name) {
